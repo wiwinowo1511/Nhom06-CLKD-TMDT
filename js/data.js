@@ -1,0 +1,167 @@
+/* Dữ liệu mẫu cho prototype VisionEase (không có backend). */
+const NEEDS = {
+  'hoc-tap': 'Học tập',
+  'van-phong': 'Làm việc văn phòng',
+  'choi-game': 'Chơi game',
+  'ban-dem': 'Làm việc ban đêm'
+};
+
+const GROUPS = {
+  screen: 'Bảo vệ mắt khi nhìn màn hình',
+  relax: 'Thư giãn mắt'
+};
+
+const BRANCHES = [
+  { id: 'q1', name: 'VisionEase Quận 1', area: 'Quận 1, TP.HCM', hours: '9:00 – 21:00', map: 'Quận 1, Thành phố Hồ Chí Minh' },
+  { id: 'q3', name: 'VisionEase Quận 3', area: 'Quận 3, TP.HCM', hours: '9:00 – 21:00', map: 'Quận 3, Thành phố Hồ Chí Minh' },
+  { id: 'td', name: 'VisionEase Thủ Đức', area: 'TP. Thủ Đức, TP.HCM', hours: '9:00 – 20:30', map: 'Thành phố Thủ Đức, Thành phố Hồ Chí Minh' }
+];
+
+const FRAME_NOTE = 'Kính lọc ánh sáng xanh 0 độ (không có độ), dùng để đeo khi nhìn màn hình, không thay thế kính thuốc hay tư vấn của bác sĩ.';
+
+const PRODUCTS = [
+  { id: 'aria', added: '2026-09-12', name: 'Kính Aria – gọng tròn TR90', group: 'screen', type: 'kinh', price: 390000, oldPrice: 450000,
+    needs: ['hoc-tap', 'van-phong'], style: 'Tròn', material: 'TR90', sold: 128,
+    colors: [{ name: 'Đen', img: 'products/commercial_studio_product_photography_of_tr90_matte_black_round_frame/screen.png', hex: '#1b2430' }, { name: 'Trong suốt', img: 'products/commercial_studio_product_photography_of_clear_transparent_crystal_tr90_round/screen.png', hex: '#9cc7e6' }, { name: 'Xanh navy', img: 'products/high_end_modern_eyeglasses_with_transparent_clear_acetate_frame_and_blue_light/screen.png', hex: '#165B9F' }],
+    desc: 'Gọng tròn nhẹ, chất liệu TR90 dẻo, phù hợp học tập và làm việc nhiều giờ trước màn hình.',
+    uses: ['Gọng TR90 nhẹ, đàn hồi tốt', 'Tròng 0 độ, lọc ánh sáng xanh', 'Kiểu tròn dễ phối trang phục'],
+    origin: 'Nhà phân phối chính hãng, gia công theo đơn đặt hàng (OEM).',
+    guide: 'Lau bằng khăn microfiber, bảo quản trong hộp khi không đeo. Tránh để gần nguồn nhiệt cao.',
+    limits: FRAME_NOTE, declared: false, stock: { q1: 14, q3: 6, td: 0 }, related: ['xit', 'hop'] },
+  { id: 'nova', added: '2026-10-02', name: 'Kính Nova – gọng vuông TR90', group: 'screen', type: 'kinh', price: 420000,
+    needs: ['van-phong', 'choi-game'], style: 'Vuông', material: 'TR90', sold: 96,
+    colors: [{ name: 'Đen', img: 'products/commercial_studio_product_photography_of_sleek_matte_black_titanium_round_frame/screen.png', hex: '#1b2430' }, { name: 'Trong suốt', img: 'products/commercial_studio_product_photography_of_translucent_smoky_grey_smoke_tinted/screen.png', hex: '#9cc7e6' }, { name: 'Xanh navy', img: 'products/high_end_modern_eyeglasses_with_transparent_clear_acetate_frame_and_blue_light/screen.png', hex: '#165B9F' }],
+    desc: 'Gọng vuông bo góc, khung chắc tay, hợp người làm việc văn phòng và chơi game dài giờ.',
+    uses: ['Gọng TR90 bo góc mềm', 'Bản kính rộng, tầm nhìn thoáng', 'Có 3 màu gọng'],
+    origin: 'Nhà phân phối chính hãng, gia công theo đơn đặt hàng (OEM).',
+    guide: 'Lau bằng khăn microfiber, bảo quản trong hộp khi không đeo.',
+    limits: FRAME_NOTE, declared: false, stock: { q1: 9, q3: 11, td: 4 }, related: ['xit', 'hop'] },
+  { id: 'lumen', added: '2026-10-20', name: 'Kính Lumen – gọng Titan chữ nhật', group: 'screen', type: 'kinh', price: 690000, oldPrice: 790000,
+    needs: ['van-phong', 'ban-dem'], style: 'Chữ nhật', material: 'Titan', sold: 54,
+    colors: [{ name: 'Bạc', img: 'products/commercial_studio_product_photography_of_premium_sleek_silver_titanium_metallic/screen.png', hex: '#aab4bf' }, { name: 'Đen', img: 'products/commercial_studio_product_photography_of_dark_gunmetal_grey_titanium_square/screen.png', hex: '#1b2430' }, { name: 'Trong suốt', img: 'products/commercial_studio_product_photography_of_translucent_smoky_grey_smoke_tinted/screen.png', hex: '#9cc7e6' }],
+    desc: 'Gọng Titan mảnh nhẹ, bền, thích hợp người làm việc văn phòng và làm việc ban đêm.',
+    uses: ['Gọng Titan nhẹ, bền', 'Thiết kế thanh lịch, hợp môi trường công sở', 'Có 3 màu gọng'],
+    origin: 'Nhà phân phối chính hãng, gia công theo đơn đặt hàng (OEM).',
+    guide: 'Không bẻ gọng mạnh, lau bằng khăn microfiber, tháo kính bằng hai tay.',
+    limits: FRAME_NOTE, declared: false, stock: { q1: 5, q3: 0, td: 3 }, related: ['xit', 'hop'] },
+  { id: 'orion', added: '2026-10-28', name: 'Kính Orion – gọng Titan mắt mèo', group: 'screen', type: 'kinh', price: 720000,
+    needs: ['hoc-tap', 'ban-dem'], style: 'Mắt mèo', material: 'Titan', sold: 37,
+    colors: [{ name: 'Hồng nhạt', img: 'products/commercial_studio_product_photography_of_pastel_translucent_blush_pink_tr90_cat/screen.png', hex: '#d7a9b3' }, { name: 'Bạc', img: 'products/commercial_studio_product_photography_of_premium_sleek_silver_titanium_metallic/screen.png', hex: '#aab4bf' }, { name: 'Đen', img: 'products/commercial_studio_product_photography_of_dark_gunmetal_grey_titanium_square/screen.png', hex: '#1b2430' }],
+    desc: 'Gọng Titan dáng mắt mèo nhẹ, phù hợp người thích kiểu dáng nổi bật nhưng vẫn gọn.',
+    uses: ['Gọng Titan nhẹ, bền', 'Dáng mắt mèo thanh thoát', 'Có 3 màu gọng'],
+    origin: 'Nhà phân phối chính hãng, gia công theo đơn đặt hàng (OEM).',
+    guide: 'Bảo quản trong hộp cứng, tránh để dưới ánh nắng trực tiếp trong thời gian dài.',
+    limits: FRAME_NOTE, declared: false, stock: { q1: 2, q3: 7, td: 5 }, related: ['hop', 'xit'] },
+  { id: 'xit', added: '2026-06-01', name: 'Dung dịch xịt rửa kính 30 ml', group: 'screen', type: 'phu-kien', price: 59000,
+    needs: ['hoc-tap', 'van-phong', 'choi-game', 'ban-dem'], style: 'Phụ kiện', material: 'Dung dịch', sold: 205,
+    colors: [{ name: 'Mặc định', img: 'products/eyelid_foam_cleanser_spray_bottle_and_microfiber_lint_free_wipes_for_dry_eyes/screen.png', hex: '#C1E1F9' }],
+    desc: 'Chai xịt nhỏ gọn giúp làm sạch mặt kính nhanh, dùng kèm khăn microfiber.',
+    uses: ['Dung tích 30 ml tiện mang theo', 'Dùng cho tròng kính và màn hình'],
+    origin: 'Nhà phân phối chính hãng.', guide: 'Xịt lên khăn hoặc mặt kính, lau nhẹ theo một chiều.',
+    limits: 'Tránh để dung dịch dính vào mắt; để xa tầm tay trẻ em.', declared: false, stock: { q1: 40, q3: 22, td: 18 }, related: ['hop'] },
+  { id: 'hop', added: '2026-07-15', name: 'Bộ vệ sinh mắt & khăn lau chuyên dụng', group: 'screen', type: 'phu-kien', price: 89000,
+    needs: ['hoc-tap', 'van-phong', 'choi-game', 'ban-dem'], style: 'Phụ kiện', material: 'Vỏ cứng', sold: 142,
+    colors: [{ name: 'Xanh navy', img: 'products/eyelid_foam_cleanser_spray_bottle_and_microfiber_lint_free_wipes_for_dry_eyes/screen.png', hex: '#165B9F' }],
+    desc: 'Bộ vệ sinh vùng mắt gồm dung dịch bọt, chai xịt và khăn microfiber chuyên dụng.',
+    uses: ['Dung dịch vệ sinh mắt chuyên dụng', 'Khăn microfiber dùng lại nhiều lần', 'Bộ sản phẩm tiện mang theo'],
+    origin: 'Nhà phân phối chính hãng.', guide: 'Đóng nắp khi không dùng, tránh đè vật nặng lên hộp.',
+    limits: 'Dùng theo hướng dẫn trên bao bì và tránh để dung dịch dính vào mắt.', declared: false, stock: { q1: 25, q3: 30, td: 12 }, related: ['xit'] },
+  { id: 'nuocmat', added: '2026-05-10', name: 'Nước mắt nhân tạo lọ 10 ml', group: 'relax', type: 'thu-gian', price: 85000,
+    needs: ['hoc-tap', 'van-phong', 'choi-game', 'ban-dem'], style: 'Dung dịch nhỏ mắt', material: 'Dung dịch', sold: 88,
+    colors: [{ name: 'Lọ 10 ml', img: 'products/keep_the_exact_same_refresh_tears_lubricant_eye_drops_bottle_and_product/screen.png', hex: '#C1E1F9' }],
+    desc: 'Dung dịch nhỏ mắt hỗ trợ làm ẩm bề mặt mắt, dùng theo hướng dẫn của nhà sản xuất.',
+    uses: ['Lọ 10 ml dùng nhiều lần', 'Dùng theo hướng dẫn in trên bao bì'],
+    origin: 'Nhà phân phối chính hãng; có giấy công bố đi kèm.',
+    guide: 'Rửa tay sạch trước khi dùng, không để đầu lọ chạm vào mắt, đậy kín sau khi dùng. Dùng trong thời hạn ghi trên bao bì sau khi mở nắp.',
+    limits: 'Nếu mắt đỏ, đau, nhìn mờ hoặc có dấu hiệu bất thường, ngừng dùng và đến cơ sở y tế. Không thay thế thuốc điều trị.', declared: true, stock: { q1: 30, q3: 18, td: 20 }, related: ['nuocmat1', 'matna'] },
+  { id: 'nuocmat1', added: '2026-08-05', name: 'Nước mắt nhân tạo dùng 1 lần (hộp 20 ống)', group: 'relax', type: 'thu-gian', price: 149000,
+    needs: ['van-phong', 'ban-dem'], style: 'Dung dịch nhỏ mắt', material: 'Dung dịch', sold: 61,
+    colors: [{ name: 'Hộp 20 ống', img: 'products/a_pack_of_single_dose_preservative_free_sterile_artificial_eye_drops_vials/screen.png', hex: '#C1E1F9' }],
+    desc: 'Ống dùng một lần tiện mang theo, hạn chế dùng lại giữa các lần nhỏ mắt.',
+    uses: ['Mỗi ống dùng một lần', 'Gọn, dễ bỏ túi'],
+    origin: 'Nhà phân phối chính hãng; có giấy công bố đi kèm.',
+    guide: 'Bẻ nắp ống, nhỏ theo hướng dẫn rồi bỏ ống sau khi dùng.',
+    limits: 'Không dùng lại ống đã mở. Nếu mắt đỏ, đau hoặc nhìn mờ, ngừng dùng và đến cơ sở y tế.', declared: true, stock: { q1: 12, q3: 0, td: 9 }, related: ['nuocmat', 'gel'] },
+  { id: 'matna', added: '2026-09-01', name: 'Mặt nạ chườm mắt tái sử dụng', group: 'relax', type: 'thu-gian', price: 129000, oldPrice: 159000,
+    needs: ['van-phong', 'ban-dem'], style: 'Chườm ấm/lạnh', material: 'Vải + gel', sold: 73,
+    colors: [{ name: 'Xanh navy', img: 'products/herbal_warm_eye_mask_pad_with_natural_chamomile_blossom_cozy_therapeutic_warm/screen.png', hex: '#2978B7' }],
+    desc: 'Mặt nạ chườm mắt có thể làm ấm hoặc làm mát, dùng thư giãn vùng mắt sau giờ làm việc.',
+    uses: ['Dùng được cả chườm ấm và chườm lạnh', 'Dây đeo điều chỉnh được'],
+    origin: 'Nhà phân phối chính hãng.',
+    guide: 'Làm ấm bằng lò vi sóng hoặc làm lạnh trong ngăn mát theo hướng dẫn kèm theo; thử nhiệt độ trên tay trước khi đắp.',
+    limits: 'Không đắp khi mắt đang đau, sưng hoặc có vết thương; không dùng quá thời gian hướng dẫn.', declared: false, stock: { q1: 16, q3: 12, td: 7 }, related: ['gel', 'nuocmat'] },
+  { id: 'gel', added: '2026-10-10', name: 'Miếng dán gel lạnh vùng mắt (hộp 5 cặp)', group: 'relax', type: 'thu-gian', price: 99000,
+    needs: ['hoc-tap', 'van-phong', 'ban-dem'], style: 'Miếng dán gel', material: 'Gel', sold: 69,
+    colors: [{ name: 'Hộp 5 cặp', img: 'products/keep_the_exact_same_systane_gel_drops_eye_lubricant_bottle_and_product_box_from/screen.png', hex: '#83E2E9' }],
+    desc: 'Miếng dán gel mát lạnh dùng để thư giãn vùng da quanh mắt, tiện dùng tại bàn làm việc.',
+    uses: ['Hộp 5 cặp dùng một lần', 'Cảm giác mát nhẹ khi dán'],
+    origin: 'Nhà phân phối chính hãng.',
+    guide: 'Làm sạch da vùng mắt, dán nhẹ trong thời gian ghi trên hộp rồi gỡ bỏ.',
+    limits: 'Không dán lên vùng da tổn thương hoặc dị ứng; ngừng dùng nếu thấy kích ứng.', declared: false, stock: { q1: 22, q3: 14, td: 16 }, related: ['matna', 'nuocmat1'] },
+  { id: 'systane-complete', added: '2026-10-24', name: 'Systane Complete – dịch nhỏ mắt 10 ml', group: 'relax', type: 'thu-gian', price: 245000,
+    needs: ['van-phong', 'ban-dem'], style: 'Dung dịch nhỏ mắt', material: 'Dung dịch', sold: 82,
+    colors: [{ name: 'Lọ 10 ml', img: 'products/keep_the_exact_same_systane_complete_sp_eye_emulsion_bottle_and_packaging_box/screen.png', hex: '#C1E1F9' }],
+    desc: 'Dung dịch nhỏ mắt dạng nhũ tương hỗ trợ làm ẩm bề mặt mắt theo hướng dẫn sử dụng.',
+    uses: ['Dung dịch nhũ tương hỗ trợ độ ẩm mắt', 'Hướng dẫn sử dụng rõ trên bao bì', 'Lọ dùng nhiều lần'], origin: 'Nhà phân phối chính hãng; có giấy công bố đi kèm.',
+    guide: 'Rửa tay sạch trước khi dùng, không để đầu lọ chạm mắt hoặc mi mắt.', limits: 'Không thay thế thuốc điều trị. Ngừng dùng và đến cơ sở y tế nếu triệu chứng kéo dài.', declared: true, stock: { q1: 10, q3: 8, td: 6 }, related: ['nuocmat', 'nuocmat1'] },
+  { id: 'massager', added: '2026-11-01', name: 'Máy massage mắt điện tử thư giãn', group: 'relax', type: 'thu-gian', price: 699000,
+    needs: ['van-phong', 'ban-dem'], style: 'Máy massage mắt', material: 'Nhựa ABS + silicone', sold: 48,
+    colors: [{ name: 'Mặc định', img: 'products/smart_futuristic_electric_eye_massager_with_pneumatic_air_compression_sleek/screen.png', hex: '#83E2E9' }],
+    desc: 'Thiết bị massage mắt bằng khí nén và rung nhẹ giúp thư giãn vùng mắt sau giờ làm việc.',
+    uses: ['Nhiều chế độ massage', 'Có thể điều chỉnh mức nén', 'Gập gọn để mang theo'], origin: 'Nhà phân phối chính hãng.',
+    guide: 'Đeo vừa mắt, chọn chế độ nhẹ và sử dụng theo thời gian ghi trong hướng dẫn.', limits: 'Không dùng với mắt đang chấn thương, viêm cấp hoặc sau phẫu thuật khi chưa được bác sĩ cho phép.', declared: false, stock: { q1: 5, q3: 8, td: 3 }, related: ['matna', 'gel'] }
+];
+
+const REVIEWS = {
+  aria: [{ n: 'Ngọc Mai', s: 5, t: 'Gọng nhẹ, đeo cả buổi học không bị đau tai.', d: '02/10/2026' }, { n: 'Hoàng Nam', s: 4, t: 'Kiểu dáng đẹp, màu navy ngoài đời đẹp hơn ảnh.', d: '18/10/2026' }, { n: 'Thảo Vy', s: 5, t: 'Giao nhanh, nhân viên tư vấn kỹ về chọn size.', d: '25/10/2026' }],
+  nova: [{ n: 'Minh Quân', s: 5, t: 'Gọng chắc, đeo chơi game vài tiếng vẫn thoải mái.', d: '05/10/2026' }, { n: 'Lan Anh', s: 4, t: 'Hơi rộng với mặt nhỏ nhưng được nhân viên chỉnh lại tại cửa hàng.', d: '20/10/2026' }],
+  lumen: [{ n: 'Đức Huy', s: 5, t: 'Titan nhẹ, nhìn lịch sự hợp đi làm.', d: '11/10/2026' }, { n: 'Phương Linh', s: 4, t: 'Gọng mảnh, cần cẩn thận khi tháo kính.', d: '23/10/2026' }],
+  orion: [{ n: 'Khánh Vy', s: 5, t: 'Dáng mắt mèo xinh, màu vàng đồng sang.', d: '14/10/2026' }],
+  khan: [{ n: 'Tuấn Kiệt', s: 5, t: 'Lau sạch, giặt dùng lại được.', d: '08/10/2026' }, { n: 'Yến Nhi', s: 4, t: 'Hơi nhỏ nhưng đủ dùng.', d: '19/10/2026' }],
+  xit: [{ n: 'Bảo Châu', s: 4, t: 'Chai nhỏ gọn, bỏ cặp tiện.', d: '12/10/2026' }],
+  hop: [{ n: 'Gia Bảo', s: 5, t: 'Hộp chắc, cầm chắc tay.', d: '09/10/2026' }],
+  nuocmat: [{ n: 'Thanh Hà', s: 5, t: 'Dùng sau giờ học thấy dễ chịu hơn, nhớ đọc kỹ hướng dẫn.', d: '03/10/2026' }, { n: 'Quốc Việt', s: 4, t: 'Lọ dễ dùng, đóng gói cẩn thận.', d: '21/10/2026' }],
+  nuocmat1: [{ n: 'Hải Yến', s: 5, t: 'Ống dùng một lần tiện mang đi làm.', d: '16/10/2026' }],
+  matna: [{ n: 'Mỹ Linh', s: 5, t: 'Chườm ấm buổi tối rất thích.', d: '07/10/2026' }, { n: 'Anh Tú', s: 4, t: 'Dây đeo hơi chật lúc đầu, chỉnh lại là ổn.', d: '22/10/2026' }],
+  gel: [{ n: 'Diệu Linh', s: 4, t: 'Dán mát, dùng giữa giờ làm việc khá tiện.', d: '13/10/2026' }]
+};
+
+const ARTICLES = [
+  { id: 'a1', topic: 'Thói quen', title: 'Quy tắc 20-20-20 khi làm việc trước màn hình', time: '3 phút',
+    image: 'banners/editorial_scientific_wellness_blog_banner_illustrating_the_20_20_20_rule_for/screen.png',
+    sum: 'Cứ 20 phút nhìn màn hình, nhìn ra xa khoảng 20 feet (khoảng 6 mét) trong 20 giây.',
+    body: ['Quy tắc 20-20-20 là gợi ý đơn giản được nhiều tổ chức nhãn khoa phổ biến: sau mỗi 20 phút nhìn màn hình, hãy rời mắt và nhìn một vật cách xa khoảng 20 feet (khoảng 6 mét) trong ít nhất 20 giây.', 'Bạn có thể đặt hẹn giờ trên điện thoại hoặc dùng ứng dụng nhắc nghỉ. Khi nghỉ, hãy chớp mắt vài lần và đứng dậy đi lại nhẹ nhàng.', 'Đây chỉ là thói quen hỗ trợ. Nếu bạn thường xuyên mỏi mắt, nhức đầu hoặc nhìn mờ, hãy đi khám để được bác sĩ tư vấn.'], rel: ['aria', 'nova'] },
+  { id: 'a2', topic: 'Bài tập', title: 'Bài tập massage mắt nhẹ nhàng sau giờ làm việc', time: '4 phút',
+    image: 'banners/editorial_clinical_wellness_banner_demonstrating_professional_acupressure_eye/screen.png',
+    sum: 'Vài động tác day nhẹ vùng quanh mắt giúp bạn thư giãn trước khi nghỉ ngơi.',
+    body: ['Rửa tay sạch, nhắm mắt và dùng đầu ngón tay day nhẹ vùng đuôi mày, thái dương theo chuyển động tròn trong khoảng 30 giây.', 'Tiếp theo, đặt lòng bàn tay ấm lên mắt nhắm trong khoảng một phút, không ấn lên nhãn cầu.', 'Nếu mắt đang đau, đỏ hoặc có vết thương, không nên tự massage mà cần đến cơ sở y tế.'], rel: ['matna', 'gel'] },
+  { id: 'a3', topic: 'Sản phẩm', title: 'Chọn gọng kính theo nhu cầu: TR90 hay Titan?', time: '5 phút',
+    image: 'banners/commercial_featured_promotional_showcase_banner_for_recommended_eye_care/screen.png',
+    sum: 'So sánh nhanh hai chất liệu gọng phổ biến để chọn đúng với thói quen sử dụng.',
+    body: ['TR90 là nhựa dẻo, nhẹ và đàn hồi, phù hợp người hay mang kính trong cặp, học sinh sinh viên hoặc người cần gọng dễ chịu khi đeo lâu.', 'Titan nhẹ, bền và mảnh, thường được chọn bởi người làm văn phòng thích kiểu dáng thanh lịch.', 'Dù chọn chất liệu nào, bạn nên thử kính tại cửa hàng để nhân viên tư vấn chọn gọng vừa vặn. Bạn có thể đặt lịch đo mắt và tư vấn sản phẩm ngay trên website.'], rel: ['aria', 'lumen'] },
+  { id: 'a4', topic: 'Thói quen', title: 'Góc làm việc thân thiện với mắt', time: '4 phút',
+    image: 'banners/commercial_advertising_promotional_banner_for_a_digital_nomad_office_eye/screen.png',
+    sum: 'Vài điều chỉnh nhỏ về ánh sáng, khoảng cách và độ sáng màn hình.',
+    body: ['Đặt màn hình cách mắt khoảng một sải tay, mép trên màn hình ngang hoặc thấp hơn tầm mắt một chút.', 'Ánh sáng phòng nên đồng đều, tránh ánh sáng chiếu thẳng vào màn hình gây chói.', 'Điều chỉnh độ sáng màn hình gần với độ sáng môi trường xung quanh, và nghỉ giải lao thường xuyên.'], rel: ['hop', 'xit'] },
+  { id: 'a5', topic: 'Sản phẩm', title: 'Dùng nước mắt nhân tạo đúng cách', time: '3 phút',
+    image: 'banners/ultra_high_end_commercial_e_commerce_showcase_banner_featuring_a_comprehensive/screen.png',
+    sum: 'Một vài lưu ý để dùng dung dịch nhỏ mắt an toàn và hợp vệ sinh.',
+    body: ['Luôn đọc kỹ hướng dẫn sử dụng in trên bao bì. Rửa tay sạch trước khi nhỏ, tránh để đầu lọ chạm vào mắt hoặc mi mắt.', 'Đậy kín nắp sau khi dùng và theo dõi thời hạn dùng sau khi mở nắp được ghi trên sản phẩm.', 'Nếu mắt đỏ, đau, nhìn mờ hoặc không cải thiện, hãy ngừng dùng và đi khám. Bạn cũng có thể gửi câu hỏi ở Góc hỏi đáp để dược sĩ hỗ trợ.'], rel: ['nuocmat', 'nuocmat1'] },
+  { id: 'a6', topic: 'Thói quen', title: 'Ngủ đủ giấc và nghỉ ngơi cho đôi mắt khi làm việc ban đêm', time: '4 phút',
+    image: 'banners/premium_commercial_gift_set_showcase_banner_h_p_qu_t_ng_b_o_v_th_l_c_cao_c_p/screen.png',
+    sum: 'Gợi ý sắp xếp giờ nghỉ cho người thường làm việc hoặc học khuya.',
+    body: ['Xen kẽ các khoảng nghỉ ngắn khi làm việc khuya, đứng dậy đi lại, uống nước và nhìn ra xa.', 'Hạn chế dùng màn hình sát giờ ngủ khi có thể, và giữ phòng ngủ tối, yên tĩnh.', 'Nếu thường xuyên mất ngủ hoặc mỏi mắt kéo dài, hãy trao đổi với bác sĩ.'], rel: ['lumen', 'matna'] }
+];
+
+const QA_SEED = [
+  { id: 'q1', author: 'Ngọc Mai', date: '28/10/2026', q: 'Kính lọc ánh sáng xanh 0 độ có dùng được cho người đã đeo kính cận không?',
+    answers: [{ role: 'Trợ lý ảo', text: 'Kính 0 độ không có độ nên không thay thế kính cận. Nếu bạn đã có kính cận, bạn cần tham khảo bác sĩ hoặc nhân viên tư vấn để chọn loại phù hợp.' }, { role: 'CSKH', text: 'Bạn có thể đặt lịch đo mắt và tư vấn chọn sản phẩm tại cửa hàng VisionEase.' }], helpful: 14, unhelpful: 1 },
+  { id: 'q2', author: 'Minh Quân', date: '30/10/2026', q: 'Đơn hàng giao tận nơi thì bao lâu được nhận?',
+    answers: [{ role: 'Trợ lý ảo', text: 'Sau khi đặt hàng, đơn hàng sẽ được giao tận nơi theo địa chỉ bạn cung cấp.' }, { role: 'CSKH', text: 'Thời gian giao hàng phụ thuộc vào khu vực nhận hàng; nhân viên sẽ liên hệ xác nhận trước khi giao.' }], helpful: 9, unhelpful: 0 },
+  { id: 'q3', author: 'Thanh Hà', date: '01/11/2026', q: 'Nước mắt nhân tạo dùng bao lâu thì nên bỏ sau khi mở nắp?',
+    answers: [{ role: 'Trợ lý ảo', text: 'Thời hạn sau khi mở nắp được ghi trên bao bì của từng sản phẩm. Vui lòng làm theo hướng dẫn đó.' }, { role: 'Dược sĩ', text: 'Bạn xem thông tin “hạn dùng sau khi mở” trên nhãn. Nếu không còn thấy rõ, nên bỏ đi và mua lọ mới.' }], helpful: 11, unhelpful: 2 },
+  { id: 'q4', author: 'Bảo Châu', date: '03/11/2026', q: 'Nếu muốn đổi gọng kính đã mua thì thủ tục thế nào?',
+    answers: [{ role: 'Trợ lý ảo', text: 'Bạn có thể gửi yêu cầu đổi trả trong 7 ngày kể từ khi nhận hàng kèm lý do và hình ảnh. Nhân viên sẽ xem xét theo chính sách.' }, { role: 'CSKH', text: 'Bạn mang kính đến cửa hàng hoặc gửi yêu cầu qua tài khoản, bên mình hỗ trợ trong 24 giờ làm việc.' }], helpful: 7, unhelpful: 0 }
+];
+
+const COUPONS = { VISION10: { type: 'pct', value: 10, label: 'Giảm 10%' }, FREESHIP: { type: 'ship', value: 0, label: 'Miễn phí vận chuyển' } };

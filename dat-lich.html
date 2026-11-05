@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Đặt lịch đến cửa hàng – VisionEase</title>
+<meta name="description" content="Đặt lịch đo mắt và tư vấn sản phẩm tại cửa hàng VisionEase">
+<link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="book">
+<main id="main">
+<section class="page-head"><div class="container"><div class="breadcrumb"><a href="index.html">Trang chủ</a> / Đặt lịch</div><h1 style="font-size:clamp(1.7rem,3vw,2.3rem)">Đặt lịch đến cửa hàng</h1><p style="color:var(--muted);max-width:640px;margin:0">Đo mắt và tư vấn chọn sản phẩm phù hợp. Chọn chi nhánh và khung giờ còn trống.</p></div></section>
+<div class="container book"><div class="panel"><form id="bForm" novalidate>
+  <div class="field"><label for="bBranch">Chi nhánh</label><select class="select" id="bBranch"></select></div>
+  <div class="field"><label>Ngày</label><div class="chips" id="bDays"></div></div>
+  <div class="field"><label>Khung giờ còn trống</label><div class="slots" id="bSlots"></div><span class="err" id="slotErr"></span></div>
+  <div class="field"><label for="bPurpose">Mục đích</label><select class="select" id="bPurpose"><option>Đo mắt</option><option>Tư vấn sản phẩm</option></select></div>
+  <div class="field"><label for="bName">Họ và tên</label><input class="input" id="bName"><span class="err"></span></div>
+  <div class="grid grid--2" style="gap:12px"><div class="field"><label for="bPhone">Số điện thoại</label><input class="input" id="bPhone" inputmode="tel"><span class="err"></span></div><div class="field"><label for="bMail">Email (để nhận nhắc lịch)</label><input class="input" id="bMail" type="email"><span class="err"></span></div></div>
+  <button class="btn btn--block" id="bSubmit" type="submit">Xác nhận đặt lịch</button><p class="meta" style="margin-top:10px">Có thể đổi hoặc huỷ lịch trước giờ hẹn tối thiểu 2 giờ.</p></form></div>
+<div><iframe class="map" id="bMap" title="Bản đồ cửa hàng" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe><p class="meta" id="bAddr" style="margin-top:8px"></p>
+<div class="panel" style="margin-top:20px"><h3>Lịch hẹn của tôi</h3><div id="bList"></div></div></div></div>
+</main>
+<script src="js/data.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/cart.js"></script>
+<script src="js/products.js"></script>
+<script src="js/support.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

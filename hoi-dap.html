@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Góc hỏi đáp – VisionEase</title>
+<meta name="description" content="Góc hỏi đáp VisionEase">
+<link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="qa">
+<main id="main">
+<section class="page-head"><div class="container"><div class="breadcrumb"><a href="index.html">Trang chủ</a> / Góc hỏi đáp</div><h1 style="font-size:clamp(1.7rem,3vw,2.3rem)">Góc hỏi đáp</h1><p style="color:var(--muted);max-width:640px;margin:0">Đăng câu hỏi, xem câu trả lời của trợ lý ảo, bác sĩ, dược sĩ và nhân viên CSKH.</p></div></section>
+<div class="container qa-layout"><aside class="aside-box qa-ask"><h3>Đặt câu hỏi mới</h3><form id="qaForm" novalidate><div class="field"><label for="qaText">Câu hỏi của bạn <span class="required">*</span></label><textarea class="textarea" id="qaText" placeholder="Ví dụ: Gọng TR90 và Titan khác nhau thế nào?" required aria-required="true"></textarea><span class="err"></span></div><button class="btn btn--block" type="submit">Gửi câu hỏi</button></form>
+<p class="disclaimer" style="margin-top:14px">Trợ lý ảo trả lời ngay nhưng không chẩn đoán bệnh. Nếu câu trả lời chưa hữu ích, hệ thống sẽ phân tích nội dung và chuyển đến bác sĩ, dược sĩ hoặc nhân viên CSKH phù hợp.</p></aside>
+<section><div class="field"><label class="sr-only" for="qaSearch">Tìm câu hỏi</label><input class="input" id="qaSearch" type="search" placeholder="Tìm câu hỏi đã có…"></div><div id="qaList"></div></section></div>
+</main>
+<script src="js/data.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/cart.js"></script>
+<script src="js/products.js"></script>
+<script src="js/support.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

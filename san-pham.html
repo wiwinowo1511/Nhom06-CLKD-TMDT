@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sản phẩm – VisionEase</title>
+<meta name="description" content="Danh sách sản phẩm VisionEase">
+<link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="products">
+<main id="main">
+<section class="page-head"><div class="container"><div class="breadcrumb"><a href="index.html">Trang chủ</a> / Sản phẩm</div><h1 style="font-size:clamp(1.7rem,3vw,2.3rem)">Sản phẩm</h1><p style="color:var(--muted);max-width:640px;margin:0">Tìm theo tên, nhu cầu, giá, kiểu dáng, màu gọng hoặc cửa hàng còn hàng.</p></div></section>
+<div class="container shop"><aside class="filters" id="filters" aria-label="Bộ lọc"></aside>
+<section><div class="toolbar"><div><button class="btn btn--ghost btn--sm filter-toggle" id="filterToggle" aria-expanded="false" aria-controls="filters">Bộ lọc</button> <strong id="count"></strong></div>
+  <div style="display:flex;gap:10px;flex-wrap:wrap"><label class="sr-only" for="pageSearch">Tìm trong danh sách</label><input class="input" id="pageSearch" type="search" placeholder="Tìm trong danh sách…" style="width:220px">
+  <label class="sr-only" for="sort">Sắp xếp</label><select class="select" id="sort" style="width:auto"><option value="pop">Bán chạy</option><option value="new">Mới nhất</option><option value="asc">Giá thấp → cao</option><option value="desc">Giá cao → thấp</option></select></div></div>
+<div class="grid grid--3" id="productGrid"></div></section></div>
+</main>
+<script src="js/data.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/cart.js"></script>
+<script src="js/products.js"></script>
+<script src="js/support.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
