@@ -52,7 +52,7 @@ const PRODUCTS = [
     origin: 'Nhà phân phối chính hãng, gia công theo đơn đặt hàng (OEM).',
     guide: 'Bảo quản trong hộp cứng, tránh để dưới ánh nắng trực tiếp trong thời gian dài.',
     limits: FRAME_NOTE, declared: false, stock: { q1: 2, q3: 7, td: 5 }, related: ['xit', 'nuocmat'] },
-  { id: 'xit', added: '2026-06-01', name: 'Dung dịch xịt rửa kính 30 ml', group: 'screen', type: 'phu-kien', price: 59000,
+  { id: 'xit', added: '2026-06-01', name: 'Dung dịch xịt rửa kính 30 ml', group: 'screen', type: 'phu-kien', price: 59000, hidden: true,
     needs: ['hoc-tap', 'van-phong', 'choi-game', 'ban-dem'], style: 'Phụ kiện', material: 'Dung dịch', sold: 205,
     colors: [{ name: 'Mặc định', img: 'products/eyelid_foam_cleanser_spray_bottle_and_microfiber_lint_free_wipes_for_dry_eyes/screen.png', hex: '#C1E1F9' }],
     desc: 'Chai xịt nhỏ gọn giúp làm sạch mặt kính nhanh, dùng kèm khăn microfiber.',
