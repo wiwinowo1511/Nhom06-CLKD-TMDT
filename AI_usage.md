@@ -4,14 +4,14 @@
 
 Nhóm sử dụng **Google Stitch** để hỗ trợ phác thảo giao diện prototype ban đầu dựa trên yêu cầu và định hướng thiết kế của nhóm.
 
-**Mục đích sử dụng:** Phác thảo bố cục, cấu trúc và giao diện ban đầu của website
+**Mục đích sử dụng:** Phác thảo bố cục, cấu trúc và giao diện ban đầu của website, tạo các hình ảnh mẫu sản phẩm cho vào folder images 
 
 **Link kết quả:**  
-https://stitch.withgoogle.com/projects/1522005550086251102
-
+https://stitch.withgoogle.com/projects/8663298891009346782
 ---
 
 ## 2. Claude Code hỗ trợ xây dựng website đủ mã html, css và file data demo
+Nhóm đính kèm file yêu cầu chức năng và phi chức năng (đã đính trong phụ lục) để yêu cầu claude tinh chỉnh phần code tải về từ Stitch và hoàn thiện thêm giao diện, bổ sung json
 
 ### Prompt sử dụng
 
