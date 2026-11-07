@@ -234,7 +234,7 @@ js/
 ├── cart.js
 ├── ui.js
 └── data.js
-```
+
 
 Nếu project nhỏ và việc chia file như trên làm phức tạp không cần thiết, có thể dùng:
 
@@ -666,8 +666,7 @@ Hãy coi file **VisionEase_FR_NFR.xlsx** là baseline để đánh giá project 
 - Hỗ trợ điều chỉnh code theo yêu cầu về bố cục và trải nghiệm người dùng.
 
 Code được sinh ra từ Claude Code được nhóm kiểm tra, chỉnh sửa và hoàn thiện trước khi sử dụng trong prototype.
-
----
+```
 
 ## 3. GitHub Copilot dùng chỉnh sửa và hoàn thiện code trong VS Code
 
