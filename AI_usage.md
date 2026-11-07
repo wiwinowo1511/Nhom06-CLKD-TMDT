@@ -332,11 +332,11 @@ formatPrice(price)
 
 Ví dụ:
 
-```js
+js
 showToast("Đã thêm sản phẩm vào giỏ hàng", "success");
-```
 
----
+
+
 
 # 11. Tạo interaction mẫu
 
@@ -589,7 +589,7 @@ Không thêm chức năng chỉ vì “có thể làm”.
 - Có chức năng vượt quá scope prototype.
 - Làm người dùng khó tập trung vào chức năng chính.
 
----
+
 
 ## NGUYÊN TẮC “LESS BUT BETTER”
 
@@ -620,7 +620,6 @@ Không tự ý thêm:
 - Các biểu đồ không phục vụ requirement.
 - Các chức năng AI chỉ để làm website trông hiện đại.
 
----
 
 ## NGUYÊN TẮC GIỮ / BỎ
 
@@ -639,7 +638,6 @@ Nếu thành phần có giá trị thẩm mỹ nhưng không cần thiết → *
 
 Nếu thành phần vừa hữu ích vừa phù hợp NFR → **ưu tiên giữ lại**.
 
----
 
 ## QUAN TRỌNG
 
@@ -656,7 +654,7 @@ Không phải:
 **Visual effects → nhiều tính năng → rồi mới kiểm tra requirement.**
 
 Hãy coi file **VisionEase_FR_NFR.xlsx** là baseline để đánh giá project sau khi chỉnh sửa.
-```
+
 
 **Mục đích sử dụng:**
 
